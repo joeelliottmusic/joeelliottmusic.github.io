@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Joe Elliott — Jazz Saxophonist</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: #0c0a08;
+      color: #f0ebe0;
+      font-family: system-ui, -apple-system, sans-serif;
+      min-height: 100vh;
+    }
+
+    /* ── Colours ── */
+    :root {
+      --gold: #c8a96e;
+      --cream: #f0ebe0;
+      --cream-dim: rgba(240, 235, 224, 0.6);
+      --cream-faint: rgba(240, 235, 224, 0.3);
+      --line: rgba(240, 235, 224, 0.1);
+    }
+
+    /* ── Nav ── */
+    nav {
+      padding: 24px 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 0.5px solid var(--line);
+    }
+
+    .nav-name {
+      font-family: Georgia, 'Book Antiqua', serif;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      text-transform: uppercase;
+      color: var(--cream);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 28px;
+      list-style: none;
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+    }
+
+    .nav-links a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover { color: var(--gold); }
+
+    /* ── Hero ── */
+    .hero {
+      padding: 64px 48px 48px;
+      display: flex;
+      gap: 52px;
+      align-items: flex-start;
+    }
+
+    .hero-text { flex: 1; }
+
+    .hero-instrument {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 18px;
+    }
+
+    .hero-name {
+      font-family: Georgia, 'Book Antiqua', serif;
+      font-size: clamp(48px, 8vw, 72px);
+      font-weight: normal;
+      line-height: 1.0;
+      letter-spacing: -0.01em;
+      color: var(--cream);
+    }
+
+    .hero-rule {
+      width: 36px;
+      height: 0.5px;
+      background: var(--gold);
+      margin: 24px 0;
+    }
+
+    .hero-bio {
+      font-size: 13px;
+      line-height: 1.85;
+      color: var(--cream-dim);
+      max-width: 320px;
+      margin-bottom: 8px;
+    }
+
+    .hero-links {
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      margin-top: 36px;
+    }
+
+    .hero-links a {
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--gold);
+      border-bottom: 0.5px solid var(--gold);
+      padding-bottom: 3px;
+      transition: opacity 0.2s;
+    }
+
+    .hero-links a:hover { opacity: 0.7; }
+
+    .hero-links a.secondary {
+      color: var(--cream-faint);
+      border-bottom-color: var(--cream-faint);
+    }
+
+    /* ── Photo ── */
+    .hero-photo {
+      width: 260px;
+      flex-shrink: 0;
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 340px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+    }
+
+    /* ── Footer ── */
+    footer {
+      padding: 20px 48px;
+      border-top: 0.5px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+      font-size: 9px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+    }
+
+    .footer-social a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-social a:hover { color: var(--gold); }
+
+    .footer-location {
+      font-size: 9px;
+      letter-spacing: 0.12em;
+      color: rgba(240, 235, 224, 0.2);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 640px) {
+      nav, .hero, footer { padding: 20px 24px; }
+      .hero { flex-direction: column-reverse; gap: 32px; }
+      .hero-photo { width: 100%; }
+      .hero-photo img { height: 280px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <span class="nav-name">Joe Elliott</span>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#listen">Listen</a></li>
+      <li><a href="#dates">Dates</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="hero-text">
+        <p class="hero-instrument">Alto &middot; Tenor Saxophone</p>
+        <h1 class="hero-name">Joe<br>Elliott</h1>
+        <div class="hero-rule"></div>
+        <p class="hero-bio">
+          London-based jazz saxophonist. Graduate of Trinity Laban
+          Conservatoire of Music and Dance.
+        </p>
+        <p class="hero-bio">
+          Resident musician, Morocco Bound Bookshop, 2020–2025.
+        </p>
+        <div class="hero-links">
+          <a href="#listen">Listen</a>
+          <a href="#contact" class="secondary">Get in touch</a>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <!-- Replace hero.jpg with Joe's photo filename -->
+        <img src="hero.jpg" alt="Joe Elliott playing saxophone">
+      </div>
+    </section>
+
+    <!-- Add more sections here as needed, e.g.: -->
+    <!-- <section id="about"> ... </section> -->
+    <!-- <section id="listen"> ... </section> -->
+    <!-- <section id="dates"> ... </section> -->
+    <!-- <section id="contact"> ... </section> -->
+
+  </main>
+
+  <footer>
+    <ul class="footer-social">
+      <!-- Replace # with actual URLs when you have them -->
+      <li><a href="#">Instagram</a></li>
+      <li><a href="#">Spotify</a></li>
+      <li><a href="#">Bandcamp</a></li>
+    </ul>
+    <span class="footer-location">London, UK</span>
+  </footer>
+
+</body>
+</html>
