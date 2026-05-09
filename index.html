@@ -62,12 +62,11 @@
     /* ── Hero ── */
     .hero {
       padding: 64px 48px 48px;
-      display: flex;
-      gap: 52px;
-      align-items: flex-start;
+      display: grid;
+      grid-template-columns: 1fr 420px;
+      gap: 64px;
+      align-items: start;
     }
-
-    .hero-text { flex: 1; }
 
     .hero-instrument {
       font-size: 10px;
@@ -97,46 +96,18 @@
       font-size: 13px;
       line-height: 1.85;
       color: var(--cream-dim);
-      max-width: 320px;
-      margin-bottom: 8px;
-    }
-
-    .hero-links {
-      display: flex;
-      gap: 24px;
-      align-items: center;
-      margin-top: 36px;
-    }
-
-    .hero-links a {
-      font-size: 10px;
-      letter-spacing: 0.16em;
-      text-transform: uppercase;
-      text-decoration: none;
-      color: var(--gold);
-      border-bottom: 0.5px solid var(--gold);
-      padding-bottom: 3px;
-      transition: opacity 0.2s;
-    }
-
-    .hero-links a:hover { opacity: 0.7; }
-
-    .hero-links a.secondary {
-      color: var(--cream-faint);
-      border-bottom-color: var(--cream-faint);
+      margin-bottom: 14px;
     }
 
     /* ── Photo ── */
     .hero-photo {
-      width: 260px;
-      flex-shrink: 0;
+      position: sticky;
+      top: 24px;
     }
 
     .hero-photo img {
       width: 100%;
-      height: 340px;
-      object-fit: cover;
-      object-position: center 20%;
+      height: auto;
       display: block;
     }
 
@@ -227,11 +198,15 @@
     .gallery-item:hover .gallery-caption { opacity: 1; }
 
     /* ── Responsive ── */
-    @media (max-width: 640px) {
-      nav, .hero, footer { padding: 20px 24px; }
-      .hero { flex-direction: column-reverse; gap: 32px; }
-      .hero-photo { width: 100%; }
-      .hero-photo img { height: 280px; }
+    @media (max-width: 768px) {
+      nav, footer { padding: 20px 24px; }
+      .hero {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        padding: 32px 24px 40px;
+        gap: 36px;
+      }
+      .hero-photo { position: static; order: -1; }
       .gallery { padding: 32px 24px 48px; }
       .gallery-grid { grid-template-columns: repeat(2, 1fr); }
       .gallery-item img { height: 200px; }
@@ -291,12 +266,16 @@
           <span class="gallery-caption">Brainchild Festival</span>
         </div>
         <div class="gallery-item">
-          <img src="hero7.jpg" alt="">
+          <img src="hero7.jpg?v=2" alt="">
           <span class="gallery-caption">Ghost Notes</span>
         </div>
         <div class="gallery-item">
           <img src="hero8.jpeg" alt="">
           <span class="gallery-caption">Wembley Arena w/Coldplay</span>
+        </div>
+        <div class="gallery-item">
+          <img src="hero.jpg" alt="">
+          <span class="gallery-caption">Morocco Bound</span>
         </div>
       </div>
     </section>
