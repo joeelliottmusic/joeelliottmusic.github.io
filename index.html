@@ -173,12 +173,45 @@
       color: rgba(240, 235, 224, 0.2);
     }
 
+    /* ── Gallery ── */
+    .gallery {
+      padding: 48px 48px 64px;
+      border-top: 0.5px solid var(--line);
+    }
+
+    .gallery-label {
+      font-size: 10px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--cream-faint);
+      margin-bottom: 24px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 8px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      object-position: center 20%;
+      display: block;
+      transition: opacity 0.2s;
+    }
+
+    .gallery-grid img:hover { opacity: 0.8; }
+
     /* ── Responsive ── */
     @media (max-width: 640px) {
       nav, .hero, footer { padding: 20px 24px; }
       .hero { flex-direction: column-reverse; gap: 32px; }
       .hero-photo { width: 100%; }
       .hero-photo img { height: 280px; }
+      .gallery { padding: 32px 24px 48px; }
+      .gallery-grid { grid-template-columns: repeat(2, 1fr); }
     }
   </style>
 </head>
@@ -218,11 +251,19 @@
       </div>
     </section>
 
-    <!-- Add more sections here as needed, e.g.: -->
-    <!-- <section id="about"> ... </section> -->
-    <!-- <section id="listen"> ... </section> -->
-    <!-- <section id="dates"> ... </section> -->
-    <!-- <section id="contact"> ... </section> -->
+    <section class="gallery">
+      <p class="gallery-label">Photos</p>
+      <div class="gallery-grid">
+        <img src="hero.jpg" alt="">
+        <img src="hero2.jpg" alt="">
+        <img src="hero3.jpg" alt="">
+        <img src="hero4.jpg" alt="">
+        <img src="hero5.jpg" alt="">
+        <img src="hero6.jpg" alt="">
+        <img src="hero7.jpg" alt="">
+        <img src="hero8.jpeg" alt="">
+      </div>
+    </section>
 
   </main>
 
