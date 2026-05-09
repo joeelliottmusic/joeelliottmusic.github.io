@@ -73,7 +73,8 @@
       letter-spacing: 0.22em;
       text-transform: uppercase;
       color: var(--gold);
-      margin-bottom: 18px;
+      margin-top: 14px;
+      margin-bottom: 0;
     }
 
     .hero-name {
@@ -221,15 +222,15 @@
       <li><a href="under-construction.html">About</a></li>
       <li><a href="under-construction.html">Listen</a></li>
       <li><a href="under-construction.html">Dates</a></li>
-      <li><a href="#" id="contact-link">Contact</a></li>
+      <li><a href="mailto:joeelliottsax@gmail.com">Contact</a></li>
     </ul>
   </nav>
 
   <main>
     <section class="hero">
       <div class="hero-text">
-        <p class="hero-instrument">Saxophone</p>
-        <h1 class="hero-name">Joe<br>Elliott</h1>
+        <h1 class="hero-name">Joe Elliott</h1>
+        <p class="hero-instrument">Saxophonist</p>
         <div class="hero-rule"></div>
         <p class="hero-bio">
           A product of London's vibrant jazz scene, Joe Elliott came up through Junior RAM and Tomorrow's Warriors before going on to study jazz saxophone at Trinity Laban under the mentorship of saxophone great and Jazz Messengers graduate Jean Toussaint.
@@ -262,16 +263,16 @@
           <span class="gallery-caption">Ronnie Scott's</span>
         </div>
         <div class="gallery-item">
-          <img src="hero5.jpg" alt="">
-          <span class="gallery-caption">Brainchild Festival</span>
+          <img src="hero8.jpeg" alt="">
+          <span class="gallery-caption">Wembley Arena w/Coldplay</span>
         </div>
         <div class="gallery-item">
           <img src="hero7.jpg?v=2" alt="">
           <span class="gallery-caption">Ghost Notes</span>
         </div>
         <div class="gallery-item">
-          <img src="hero8.jpeg" alt="">
-          <span class="gallery-caption">Wembley Arena w/Coldplay</span>
+          <img src="hero5.jpg" alt="">
+          <span class="gallery-caption">Brainchild Festival</span>
         </div>
         <div class="gallery-item">
           <img src="hero.jpg" alt="">
@@ -281,14 +282,6 @@
     </section>
 
   </main>
-
-  <dialog id="contact-modal" style="background:#0c0a08;border:0.5px solid rgba(240,235,224,0.1);color:#f0ebe0;padding:48px;max-width:400px;width:90%;text-align:center;">
-    <p style="font-size:10px;letter-spacing:0.22em;text-transform:uppercase;color:#c8a96e;margin-bottom:16px;">Contact</p>
-    <div style="width:36px;height:0.5px;background:#c8a96e;margin:0 auto 20px;"></div>
-    <a href="mailto:joeelliottsax@gmail.com" style="font-family:Georgia,'Book Antiqua',serif;font-size:16px;color:#f0ebe0;text-decoration:none;letter-spacing:0.04em;">joeelliottsax@gmail.com</a>
-    <br><br>
-    <button onclick="document.getElementById('contact-modal').close()" style="margin-top:8px;font-size:9px;letter-spacing:0.16em;text-transform:uppercase;background:none;border:none;color:rgba(240,235,224,0.3);cursor:pointer;">Close</button>
-  </dialog>
 
   <footer>
     <ul class="footer-social">
@@ -300,15 +293,6 @@
     <span class="footer-location">New York/London</span>
   </footer>
 
-  <script>
-    document.getElementById('contact-link').addEventListener('click', function(e) {
-      e.preventDefault();
-      document.getElementById('contact-modal').showModal();
-    });
-    document.getElementById('contact-modal').addEventListener('click', function(e) {
-      if (e.target === this) this.close();
-    });
-  </script>
 
 </body>
 </html>
